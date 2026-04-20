@@ -16,13 +16,19 @@ vim.g.netrw_banner = 0
 
 vim.opt.mouse = ""
 
-vim.pack.add({ "https://github.com/nvim-lua/plenary.nvim" })
-vim.cmd("packadd plenary.nvim")
-vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim" })
-vim.pack.add({"https://github.com/lewis6991/gitsigns.nvim"})
+vim.pack.add({
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/nvim-telescope/telescope.nvim",
+    "https://github.com/lewis6991/gitsigns.nvim",
+    {src="https://github.com/nvim-treesitter/nvim-treesitter", branch="main", build=":TSUpdate"},
+    "https://github.com/neovim/nvim-lspconfig",
 
+})
+vim.cmd("packadd plenary.nvim")
 vim.cmd("packadd gitsigns.nvim")
 vim.cmd("packadd telescope.nvim")
+vim.cmd("packadd nvim-treesitter")
+vim.cmd("packadd nvim-lspconfig")
 
 builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -89,3 +95,6 @@ require('gitsigns').setup {
     col = 1
   },
 }
+
+require('nvim-treesitter').install { 'rust', 'javascript', 'lua', 'typescript', 'vue' }
+vim.lsp.enable('rust-analyzer')
