@@ -27,6 +27,6 @@ vim.cmd("packadd cmp-path")
 vim.cmd("packadd cmp-cmdline")
 vim.cmd("packadd cmp-vsnip")
 vim.cmd("packadd vim-vsnip")
-vim.cmd("colorscheme nordfox")
+vim.cmd("colorscheme carbonfox")
 
 vim.cmd("packadd conform.nvim")

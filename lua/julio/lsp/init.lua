@@ -43,7 +43,7 @@ cmp.setup.cmdline(":", {
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 vim.lsp.config["rust_analyzer"] = {
 	cmd = { "rust-analyzer" },
-	root_dir = vim.fs.root(0, { "Cargo.toml", "rust-project.json" }),
+	root_markers = { "Cargo.toml", "rust-project.json" },
 	filetypes = { "rust" },
 	capabilities = capabilities,
 }
