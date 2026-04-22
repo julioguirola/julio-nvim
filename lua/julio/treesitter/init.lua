@@ -1,1 +1,1 @@
-require("nvim-treesitter").install({ "rust", "javascript", "lua", "typescript", "vue" })
+require("nvim-treesitter").install({ "rust", "javascript", "lua", "typescript", "vue", "python" })

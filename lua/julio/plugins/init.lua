@@ -11,9 +11,8 @@ vim.pack.add({
 	"https://github.com/hrsh7th/cmp-cmdline",
 	"https://github.com/hrsh7th/cmp-vsnip",
 	"https://github.com/hrsh7th/vim-vsnip",
-
+	"https://github.com/ellisonleao/gruvbox.nvim",
 	"https://github.com/stevearc/conform.nvim",
-	"https://github.com/EdenEast/nightfox.nvim",
 })
 vim.cmd("packadd plenary.nvim")
 vim.cmd("packadd gitsigns.nvim")
@@ -27,6 +26,15 @@ vim.cmd("packadd cmp-path")
 vim.cmd("packadd cmp-cmdline")
 vim.cmd("packadd cmp-vsnip")
 vim.cmd("packadd vim-vsnip")
-vim.cmd("colorscheme nordfox")
+
+require("gruvbox").setup({
+	italic = {
+		strings = false,
+		emphasis = false,
+		comments = false,
+		folds = false,
+	},
+})
+vim.cmd("colorscheme gruvbox")
 
 vim.cmd("packadd conform.nvim")

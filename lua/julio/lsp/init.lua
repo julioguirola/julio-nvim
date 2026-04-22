@@ -89,6 +89,20 @@ vim.lsp.config["pylsp"] = {
 
 vim.lsp.enable("pylsp")
 
+vim.lsp.config["pyright"] = {
+	cmd = { "pyright-langserver", "--stdio" },
+	filetypes = { "python" },
+	root_markers = {
+		"pyproject.toml",
+		"setup.py",
+		"requirements.txt",
+		".git",
+	},
+	capabilities = capabilities,
+}
+
+vim.lsp.enable("pyright")
+
 vim.lsp.config["ts_ls"] = {
 	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
