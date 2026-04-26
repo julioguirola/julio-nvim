@@ -13,11 +13,13 @@ vim.pack.add({
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/rose-pine/neovim",
 	"https://github.com/jake-stewart/multicursor.nvim",
+	"https://github.com/b0o/SchemaStore.nvim",
 })
 
 vim.cmd("packadd plenary.nvim")
 vim.cmd("packadd gitsigns.nvim")
 vim.cmd("packadd telescope.nvim")
+vim.cmd("packadd SchemaStore.nvim")
 vim.cmd("packadd multicursor.nvim")
 vim.cmd("packadd nvim-treesitter")
 vim.cmd("packadd nvim-cmp")

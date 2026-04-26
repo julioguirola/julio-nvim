@@ -110,7 +110,20 @@ vim.lsp.config["ts_ls"] = {
 	capabilities = capabilities,
 }
 
-vim.lsp.enable("ts_ls")
+vim.lsp.config["jsonls"] = {
+	cmd = { "vscode-json-languageserver", "--stdio" },
+	filetypes = { "json", "jsonc" },
+	root_markers = { "tsconfig.json", "jsconfig.json", "package.json" },
+	settings = {
+		json = {
+			schemas = require("schemastore").json.schemas(),
+			validate = { enable = true },
+		},
+	},
+	capabilities = capabilities,
+}
+
+vim.lsp.enable("jsonls")
 
 require("conform").setup({
 	formatters_by_ft = {
@@ -119,6 +132,7 @@ require("conform").setup({
 		rust = { "rustfmt", lsp_format = "fallback" },
 		javascript = { "prettier", stop_after_first = true },
 		typescript = { "prettier", stop_after_first = true },
+		json = { "prettier", stop_after_first = true },
 	},
 })
 
