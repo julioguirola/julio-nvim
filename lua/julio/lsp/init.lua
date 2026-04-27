@@ -136,6 +136,14 @@ vim.lsp.config["gopls"] = {
 
 vim.lsp.enable("gopls")
 
+vim.lsp.config["ymlsp"] = {
+	cmd = { "yaml-language-server", "--stdio" },
+	filetypes = { "yml", "yaml" },
+	capabilities = capabilities,
+}
+
+vim.lsp.enable("ymlsp")
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },

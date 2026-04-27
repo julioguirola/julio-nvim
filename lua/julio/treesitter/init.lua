@@ -7,4 +7,5 @@ require("nvim-treesitter").install({
 	"go",
 	"rust",
 	"html",
+	"yaml",
 })
