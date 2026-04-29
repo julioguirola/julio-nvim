@@ -90,7 +90,7 @@ vim.lsp.config["pylsp"] = {
 vim.lsp.enable("pylsp")
 
 vim.lsp.config["pyright"] = {
-	cmd = { "pyright-langserver", "--stdio" },
+	cmd = { "pyright-langserver" },
 	filetypes = { "python" },
 	root_markers = {
 		"pyproject.toml",
@@ -113,7 +113,7 @@ vim.lsp.config["ts_ls"] = {
 vim.lsp.enable("ts_ls")
 
 vim.lsp.config["jsonls"] = {
-	cmd = { "vscode-json-languageserver", "--stdio" },
+	cmd = { "vscode-json-language-server", "--stdio" },
 	filetypes = { "json", "jsonc" },
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json" },
 	settings = {
@@ -153,19 +153,19 @@ vim.lsp.config["tw"] = {
 
 vim.lsp.enable("tw")
 
-vim.lsp.config["vuels"] = {
-	cmd = { "vls", "--stdio" },
-	filetypes = { "vue", "typescript" },
-	root_markers = { "tsconfig.json", "vite.config.ts", ".git" },
-	settings = {
-		vue = {
-			hybridMode = false,
-		},
-	},
-	capabilities = capabilities,
-}
-
-vim.lsp.enable("vuels")
+-- vim.lsp.config["vuels"] = {
+-- 	cmd = { "vls", "--stdio" },
+-- 	filetypes = { "vue", "typescript" },
+-- 	root_markers = { "tsconfig.json", "vite.config.ts", ".git" },
+-- 	settings = {
+-- 		vue = {
+-- 			hybridMode = false,
+-- 		},
+-- 	},
+-- 	capabilities = capabilities,
+-- }
+--
+-- vim.lsp.enable("vuels")
 
 vim.lsp.config["lua_ls"] = {
 	cmd = { "lua-language-server" },
