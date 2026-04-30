@@ -62,7 +62,8 @@ require("rose-pine").setup({
 		-- Aquí es donde forzamos el color sólido para el menú de cmp
 		Pmenu = { bg = "surface" }, -- Fondo sólido del menú
 		PmenuSel = { bg = "overlay" }, -- Fondo sólido para item seleccionado
-		PmenuThumb = { bg = "gold" }, -- La barra de scroll (opcional)
+		NormalFloat = { bg = "surface" },
+		FloatBorder = { bg = "surface" },
 	},
 
 	before_highlight = function(group, highlight, palette)

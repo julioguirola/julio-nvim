@@ -38,12 +38,9 @@ cmp.setup({
 	},
 	window = {
 		completion = {
-			border = "rounded", -- o "solid", "single", etc.
-			-- Aquí forzamos el highlight del contenido normal del menú
 			winhighlight = "Normal:Pmenu",
 		},
 		documentation = {
-			border = "rounded",
 			winhighlight = "Normal:Pmenu",
 		},
 	},
