@@ -38,10 +38,13 @@ cmp.setup({
 	},
 	window = {
 		completion = {
-			winhighlight = "Normal:Pmenu",
+			border = "rounded",
+			-- winhighlight = "Normal:Pmenu",
 		},
 		documentation = {
-			winhighlight = "Normal:Pmenu",
+			border = "rounded",
+			winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder",
+			-- winhighlight = "Normal:Pmenu",
 		},
 	},
 })
