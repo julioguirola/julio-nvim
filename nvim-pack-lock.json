@@ -76,6 +76,10 @@
       "rev": "028d9a0695a0cc4cfa893889f8c408ed7ccc8adc",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
+    "vim-illuminate": {
+      "rev": "0d1e93684da00ab7c057410fecfc24f434698898",
+      "src": "https://github.com/RRethy/vim-illuminate"
+    },
     "vim-vsnip": {
       "rev": "9bcfabea653abdcdac584283b5097c3f8760abaa",
       "src": "https://github.com/hrsh7th/vim-vsnip"

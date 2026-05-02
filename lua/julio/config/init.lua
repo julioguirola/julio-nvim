@@ -34,7 +34,7 @@ vim.diagnostic.config({
 	update_in_insert = false,
 })
 
-vim.g.netrw_keepdir = 0
+-- vim.g.netrw_keepdir = 0
 
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldmethod = "expr"

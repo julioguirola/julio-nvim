@@ -123,12 +123,26 @@ vim.lsp.enable("pyright")
 
 vim.lsp.config["ts_ls"] = {
 	cmd = { "typescript-language-server", "--stdio" },
-	filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
+	filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", "tsconfig.node.json", "tsconfig.app.json" },
 	capabilities = capabilities,
 }
 
 vim.lsp.enable("ts_ls")
+
+vim.lsp.config["vue_lsp"] = {
+	cmd = { "vue-language-server", "--stdio" },
+	filetypes = { "vue" },
+	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", "tsconfig.node.json", "tsconfig.app.json" },
+	init_options = {
+		typescript = {
+			tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript-language-server/node_modules/typescript/lib",
+		},
+	},
+	capabilities = capabilities,
+}
+
+vim.lsp.enable("vue_lsp")
 
 vim.lsp.config["jsonls"] = {
 	cmd = { "vscode-json-language-server", "--stdio" },
@@ -137,7 +151,7 @@ vim.lsp.config["jsonls"] = {
 	settings = {
 		json = {
 			schemas = require("schemastore").json.schemas(),
-			validate = { enable = true },
+			validate = { enable = true, allowTrailingCommas = true },
 		},
 	},
 	capabilities = capabilities,
@@ -170,15 +184,6 @@ vim.lsp.config["tw"] = {
 }
 
 vim.lsp.enable("tw")
-
-vim.lsp.config["vuels"] = {
-	cmd = { "vls", "--stdio" },
-	filetypes = { "vue" },
-	root_markers = { "tsconfig.json", "vite.config.ts", ".git" },
-	capabilities = capabilities,
-}
-
-vim.lsp.enable("vuels")
 
 vim.lsp.config["lua_ls"] = {
 	cmd = { "lua-language-server" },
