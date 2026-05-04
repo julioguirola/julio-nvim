@@ -27,12 +27,6 @@ vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
-vim.keymap.set("n", "<leader>cA", function()
-	vim.lsp.buf.code_action({
-		context = { only = { "source" } },
-	})
-end)
-
 vim.diagnostic.config({
 	virtual_text = true, -- shows inline after the line
 	signs = true, -- shows icons in the sign column
