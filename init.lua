@@ -8,5 +8,3 @@ require("julio.lsp")
 require("julio.gitsigns")
 require("julio.autopairs")
 require("julio.mason")
-
--- mi config
