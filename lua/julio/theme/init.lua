@@ -43,40 +43,6 @@ require("rose-pine").setup({
 		h5 = "pine",
 		h6 = "foam",
 	},
-
-	palette = {
-		-- Override the builtin palette per variant
-		-- moon = {
-		--     base = '#18191a',
-		--     overlay = '#363738',
-		-- },
-	},
-
-	-- NOTE: Highlight groups are extended (merged) by default. Disable this
-	-- per group via `inherit = false`
-	highlight_groups = {
-		-- Comment = { fg = "foam" },
-		-- StatusLine = { fg = "love", bg = "love", blend = 15 },
-		-- VertSplit = { fg = "muted", bg = "muted" },
-		-- Visual = { fg = "base", bg = "text", inherit = false },
-		-- Aquí es donde forzamos el color sólido para el menú de cmp
-		-- Pmenu = { bg = "surface" }, -- Fondo sólido del menú
-		-- PmenuSel = { bg = "overlay" }, -- Fondo sólido para item seleccionado
-		-- NormalFloat = { bg = "surface" },
-		-- FloatBorder = { bg = "surface" },
-	},
-
-	before_highlight = function(group, highlight, palette)
-		-- Disable all undercurls
-		-- if highlight.undercurl then
-		--     highlight.undercurl = false
-		-- end
-		--
-		-- Change palette colour
-		-- if highlight.fg == palette.pine then
-		--     highlight.fg = palette.foam
-		-- end
-	end,
 })
 
 vim.cmd("colorscheme rose-pine")

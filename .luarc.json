@@ -1,4 +1,5 @@
 {
-  "diagnostics.globals": ["vim", "opts"]
+  "diagnostics.globals": ["vim", "opts",
+        "builtin"]
 }
 

@@ -232,6 +232,11 @@ require("conform").setup({
 		vue = { "prettier", stop_after_first = true },
 		go = { "gofmt", lsp_format = "fallback" },
 	},
+	formatters = {
+		prettier = {
+			command = vim.fn.stdpath("data") .. "/mason/bin/prettier",
+		},
+	},
 })
 
 require("conform").setup({
