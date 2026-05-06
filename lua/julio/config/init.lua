@@ -101,6 +101,5 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set({ "n", "v" }, "x", '"_x', { noremap = true })
 vim.keymap.set({ "n", "v" }, "X", '"_X', { noremap = true })
-vim.keymap.set({ "n", "v" }, "d", '"_d', { noremap = true })
-vim.keymap.set({ "n", "v" }, "D", '"_D', { noremap = true })
-vim.keymap.set("n", "dd", '"_dd', { noremap = true })
+
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
