@@ -18,6 +18,7 @@ vim.pack.add({
 	"https://github.com/windwp/nvim-autopairs",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
+	"https://github.com/mfussenegger/nvim-lint",
 })
 
 vim.cmd("packadd plenary.nvim")
@@ -39,3 +40,4 @@ vim.cmd("packadd nvim-autopairs")
 vim.cmd("packadd mason.nvim")
 vim.cmd("packadd vim-illuminate")
 vim.cmd("packadd lualine.nvim")
+vim.cmd("packadd nvim-lint")
