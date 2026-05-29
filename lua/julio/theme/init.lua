@@ -5,7 +5,6 @@ require("rose-pine").setup({
 	extend_background_behind_borders = true,
 	enable = {
 		terminal = true,
-		legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
 		migrations = true, -- Handle deprecated options automatically
 	},
 	styles = {
@@ -46,3 +45,15 @@ require("rose-pine").setup({
 })
 
 vim.cmd("colorscheme rose-pine")
+
+local bg = "#232136"
+
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = bg })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = bg })
+vim.api.nvim_set_hl(0, "FloatTitle", { bg = bg })
+vim.api.nvim_set_hl(0, "FloatFooter", { bg = bg })
+
+vim.api.nvim_set_hl(0, "Pmenu", { bg = bg })
+vim.api.nvim_set_hl(0, "PmenuSbar", { bg = bg })
+vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#44415a" })
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#44415a" })
