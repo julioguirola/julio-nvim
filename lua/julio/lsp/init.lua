@@ -87,11 +87,6 @@ vim.lsp.config["vue_lsp"] = {
 	cmd = { "vue-language-server", "--stdio" },
 	filetypes = { "vue" },
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", "tsconfig.node.json", "tsconfig.app.json" },
-	init_options = {
-		typescript = {
-			tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript-language-server/node_modules/typescript/lib",
-		},
-	},
 	capabilities = capabilities,
 }
 
