@@ -34,9 +34,6 @@ vim.diagnostic.config({
 	update_in_insert = false,
 })
 
--- Netrw nunca toca el cwd, nosotros lo controlamos todo
-vim.g.netrw_keepdir = 1
-
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldmethod = "expr"
 vim.opt.foldenable = true
