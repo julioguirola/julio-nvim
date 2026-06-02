@@ -188,7 +188,7 @@ require("conform").setup({
 		json = { "prettier", stop_after_first = true },
 		vue = { "prettier", stop_after_first = true },
 		go = { "gofmt", lsp_format = "fallback" },
-		php = { "php-cs-fixer", lsp_format = "fallback" },
+		php = { "php_cs_fixer" },
 		blade = { "blade-formatter", lsp_format = "fallback" },
 	},
 	formatters = {
