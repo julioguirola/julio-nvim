@@ -169,6 +169,15 @@ vim.lsp.config["lua_ls"] = {
 
 vim.lsp.enable("lua_ls")
 
+vim.lsp.config["inteliphense"] = {
+	cmd = { "intelephense", "--stdio" },
+	filetypes = { "php" },
+	root_markers = { "composer.json", ".git" },
+	capabilities = capabilities,
+}
+
+vim.lsp.enable("inteliphense")
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -179,6 +188,8 @@ require("conform").setup({
 		json = { "prettier", stop_after_first = true },
 		vue = { "prettier", stop_after_first = true },
 		go = { "gofmt", lsp_format = "fallback" },
+		php = { "php-cs-fixer", lsp_format = "fallback" },
+		blade = { "blade-formatter", lsp_format = "fallback" },
 	},
 	formatters = {
 		prettier = {

@@ -11,6 +11,8 @@ require("nvim-treesitter").install({
 	"css",
 	"json",
 	"gomod",
+	"php",
+	"blade",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -27,6 +29,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		"css",
 		"json",
 		"gomod",
+		"php",
+		"blade",
 	},
 	callback = function()
 		vim.treesitter.start()
