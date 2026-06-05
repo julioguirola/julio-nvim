@@ -14,7 +14,6 @@ vim.pack.add({
 	"https://github.com/rose-pine/neovim",
 	"https://github.com/jake-stewart/multicursor.nvim",
 	"https://github.com/b0o/SchemaStore.nvim",
-	"https://github.com/github/copilot.vim",
 	"https://github.com/windwp/nvim-autopairs",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
@@ -24,7 +23,6 @@ vim.pack.add({
 vim.cmd("packadd plenary.nvim")
 vim.cmd("packadd gitsigns.nvim")
 vim.cmd("packadd telescope.nvim")
-vim.cmd("packadd copilot.vim")
 vim.cmd("packadd SchemaStore.nvim")
 vim.cmd("packadd multicursor.nvim")
 vim.cmd("packadd nvim-treesitter")
@@ -38,6 +36,5 @@ vim.cmd("packadd vim-vsnip")
 vim.cmd("packadd conform.nvim")
 vim.cmd("packadd nvim-autopairs")
 vim.cmd("packadd mason.nvim")
-vim.cmd("packadd vim-illuminate")
 vim.cmd("packadd lualine.nvim")
 vim.cmd("packadd nvim-lint")

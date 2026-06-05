@@ -42,6 +42,7 @@ cmp.setup.cmdline(":", {
 })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 vim.lsp.config["rust_analyzer"] = {
 	cmd = { "rust-analyzer" },
 	root_markers = { "Cargo.toml", "rust-project.json" },
@@ -196,9 +197,6 @@ require("conform").setup({
 			command = vim.fn.stdpath("data") .. "/mason/bin/prettier",
 		},
 	},
-})
-
-require("conform").setup({
 	format_on_save = {
 		timeout_ms = 500,
 		lsp_format = "fallback",
