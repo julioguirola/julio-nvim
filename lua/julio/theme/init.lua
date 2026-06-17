@@ -1,59 +1,27 @@
-require("rose-pine").setup({
-	variant = "moon", -- auto, main, moon, or dawn
-	dark_variant = "moon", -- main, moon, or dawn
-	dim_inactive_windows = false,
-	extend_background_behind_borders = true,
-	enable = {
-		terminal = true,
-		migrations = true, -- Handle deprecated options automatically
+require("onedark").setup({
+	style = "warmer",
+	transparent = true,
+	term_colors = true,
+	ending_tildes = false,
+	cmp_itemkind_reverse = false,
+	toggle_style_key = nil,
+	toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" },
+	code_style = {
+		comments = "italic",
+		keywords = "none",
+		functions = "none",
+		strings = "none",
+		variables = "none",
 	},
-	styles = {
-		bold = false,
-		italic = false,
-		transparency = true,
+	lualine = {
+		transparent = false,
 	},
-	groups = {
-		border = "muted",
-		link = "iris",
-		panel = "surface",
-
-		error = "love",
-		hint = "iris",
-		info = "foam",
-		note = "pine",
-		todo = "rose",
-		warn = "gold",
-
-		git_add = "foam",
-		git_change = "rose",
-		git_delete = "love",
-		git_dirty = "rose",
-		git_ignore = "muted",
-		git_merge = "iris",
-		git_rename = "pine",
-		git_stage = "iris",
-		git_text = "rose",
-		git_untracked = "subtle",
-
-		h1 = "iris",
-		h2 = "foam",
-		h3 = "rose",
-		h4 = "gold",
-		h5 = "pine",
-		h6 = "foam",
+	colors = {},
+	highlights = {},
+	diagnostics = {
+		darker = true,
+		undercurl = true,
+		background = true,
 	},
 })
-
-vim.cmd("colorscheme rose-pine")
-
-local bg = "#232136"
-
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = bg })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = bg })
-vim.api.nvim_set_hl(0, "FloatTitle", { bg = bg })
-vim.api.nvim_set_hl(0, "FloatFooter", { bg = bg })
-
-vim.api.nvim_set_hl(0, "Pmenu", { bg = bg })
-vim.api.nvim_set_hl(0, "PmenuSbar", { bg = bg })
-vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#44415a" })
-vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#44415a" })
+require("onedark").load()

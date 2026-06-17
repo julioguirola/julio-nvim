@@ -18,6 +18,7 @@ vim.pack.add({
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/mfussenegger/nvim-lint",
+	"https://github.com/navarasu/onedark.nvim",
 })
 
 vim.cmd("packadd plenary.nvim")
