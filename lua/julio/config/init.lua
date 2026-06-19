@@ -51,9 +51,6 @@ vim.keymap.set("n", "<A-j>", ":m.+1<CR>==")
 vim.keymap.set("v", "<A-j>", ":m'>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m'<-2<CR>gv=gv")
 
-vim.keymap.set({ "n", "v" }, "y", '"+y')
-vim.keymap.set("n", "Y", '"+Y')
-
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set({ "n", "v" }, "x", '"_x', { noremap = true })
